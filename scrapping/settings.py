@@ -70,6 +70,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "scrapping.urls"
 
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / "static"]  # if you have a global static folder
+STATIC_ROOT = BASE_DIR / "staticfiles"   
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -245,5 +249,6 @@ SCRAPER_MAX_CAPTCHA_ATTEMPTS = env_int("SCRAPER_MAX_CAPTCHA_ATTEMPTS", 10)
 # ------------------------------------------------------------------------------
 # Default primary key field type
 # ------------------------------------------------------------------------------
+
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
